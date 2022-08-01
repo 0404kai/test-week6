@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+  html {
+    font-family: 'Roboto', 'Noto Sans TC', system-ui, sans-serif;
+  }
+  body{
+    display: flex;
+    flex-direction: column;
+  }
+  a, label {
+    display: block;
+  }
+}
+
+@layer components {
+  .title-underline {
+    @apply relative after:absolute after:bottom-0 after:w-[50px] after:h-[3px] after:bg-green;
+  }
+  .text-gradient {
+    @apply from-blue to-green bg-clip-text text-transparent text-center;
+  }
+}
+
+@layer utilities {
+  .hover-500 {
+    @apply transition-all duration-500;
+  }
+  .hover-border-t {
+    @apply lg:before:absolute lg:before:hover-500 lg:before:opacity-0 lg:before:left-0 lg:before:top-0 lg:before:w-8 lg:before:h-8 lg:before:border-l lg:before:border-t lg:before:border-l-green lg:before:border-t-green lg:before:rounded-tl-xl lg:hover:before:opacity-100 lg:hover:before:-left-8 lg:hover:before:-top-8
+    lg:after:absolute lg:after:hover-500 lg:after:opacity-0 lg:after:right-0 lg:after:top-0 lg:after:w-8 lg:after:h-8 lg:after:border-r lg:after:border-t lg:after:border-r-green lg:after:border-t-green lg:after:rounded-tr-xl lg:hover:after:opacity-100 lg:hover:after:-right-8 lg:hover:after:-top-8
+  }
+  .hover-border-b {
+    @apply lg:before:absolute lg:before:hover-500 lg:before:opacity-0 lg:before:left-0 lg:before:bottom-0 lg:before:w-8 lg:before:h-8 lg:before:border-l lg:before:border-b lg:before:border-l-green lg:before:border-b-green lg:before:rounded-bl-xl lg:hover:before:opacity-100 lg:hover:before:-left-8 lg:hover:before:-bottom-8
+    lg:after:absolute lg:after:hover-500 lg:after:opacity-0 lg:after:right-0 lg:after:bottom-0 lg:after:w-8 lg:after:h-8 lg:after:border-r lg:after:border-b lg:after:border-r-green lg:after:border-b-green lg:after:rounded-br-xl lg:hover:after:opacity-100 lg:hover:after:-right-8 lg:hover:after:-bottom-8
+  }
+}
+
+.swiper-pagination-bullet{
+  opacity: 1;
+  background-color: #62DB54;
+}
+.swiper-pagination-bullet-active{
+  width: 16px;
+  border-radius: 100px;
+}
+
+.datepicker{
+  color: #000;
+}
+.datepicker-cell:not(.disabled):hover{
+  background-color: #dde2e6;
+}

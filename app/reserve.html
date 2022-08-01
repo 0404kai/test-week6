@@ -1,0 +1,219 @@
+---
+title: 首頁
+layout: ./app/layout.ejs
+engine: ejs
+current: index
+---
+
+<main class="bg-black text-white pt-24 pb-11 md:pt-28 lg:pt-22 lg:pb-36">
+  <div id="apply">
+    <div class="text-gray-500 px-3 mb-6 lg:bg-dark lg:pt-6 lg:pb-4 lg:mb-12">
+      <ol
+        class="flex justify-between relative before:absolute before:left-10 before:top-2.5 before:w-2/5 before:h-0.5 before:bg-gray after:absolute after:right-8 after:top-2.5 after:w-2/5 after:h-0.5 after:bg-gray lg:w-[832px] lg:mx-auto lg:before:w-[48%] lg:before:left-6 lg:after:w-[48%] lg:after:right-6">
+        <li>
+          <span
+            class="relative z-10 flex justify-center items-center font-Azeret text-12 w-5 h-5 rounded-full border border-green text-white bg-green mx-auto mb-1">
+            1
+          </span>
+          <p class="text-green">課程報名</p>
+        </li>
+        <li>
+          <span
+            class="relative z-10 flex justify-center items-center font-Azeret text-12 w-5 h-5 rounded-full border border-gray-500 text-white bg-dark-300 mx-auto mb-1">
+            2
+          </span>
+          <p>信用卡付款</p>
+        </li>
+        <li>
+          <span
+            class="relative z-10 flex justify-center items-center font-Azeret text-12 w-5 h-5 rounded-full border border-gray-500 text-white bg-dark-300 mx-auto mb-1">
+            3
+          </span>
+          <p>付款成功</p>
+        </li>
+      </ol>
+    </div>
+    <div class="container lg:flex lg:justify-center lg:items-center">
+      <div
+        class="relative bg-dark-300 mb-8 p-6 after:absolute after:left-1/2 after:-bottom-3 after:-translate-x-1/2 after:border-12 after:border-b-0 after:border-t-dark-300 lg:w-1/3 lg:-mr-18 lg:px-8 lg:py-12 lg:after:left-auto lg:translate-x-0 lg:after:-right-7.5 lg:after:bottom-1/2 lg:after:rotate-90 lg:after:-scale-100">
+        <img src="./assets/images/teacher01.jpg" alt="course"
+          class="w-25 rounded-full border-3 border-green mx-auto mb-4">
+        <div class="mb-5 space-y-2">
+          <h1 class="text-center font-bold lg:text-lg">2022 Python 全攻略｜從入門到實務</h1>
+          <h2 class="text-center text-green">前端語言</h3>
+            <p>帶領無基礎、文組生、對網頁設計有興趣的人，進入網站工程領域的基礎課，將從最基礎的 HTML 語法出發。</p>
+        </div>
+      </div>
+      <form action="credit-card.html" class="bg-dark p-6 lg:w-2/3 lg:pl-28 lg:pr-12 lg:py-12">
+        <h2 class="text-center text-2xl font-bold mb-6">課程報名</h2>
+        <h3 class="text-center text-lg font-bold mb-4 lg:text-left">選擇付款方式</h3>
+        <ul class="text-center grid grid-cols-2 gap-2 mb-8 lg:flex lg:gap-4">
+          <li class="rounded-lg border border-green text-green hover-500 hover:bg-dark-300">
+            <a href="#" class="p-4 lg:px-8">信用卡付款</a>
+          </li>
+          <li class="rounded-lg border border-white hover-500 hover:bg-dark-300">
+            <a href="#" class="p-4 lg:px-8">超商繳款</a>
+          </li>
+          <li class="rounded-lg border border-white hover-500 hover:bg-dark-300">
+            <a href="#" class="p-4 lg:px-8">ATM轉帳</a>
+          </li>
+          <li class="rounded-lg border border-white hover-500 hover:bg-dark-300">
+            <a href="#" class="p-4 lg:px-8">12期分期付款</a>
+          </li>
+        </ul>
+        <h3 class="text-center text-lg font-bold mb-4 lg:text-left lg:mb-6">訂單資訊</h3>
+        <div class="space-y-4 mb-6 lg:space-y-0 lg:grid lg:gap-x-12 lg:gap-y-6 lg:grid-cols-2">
+          <div>
+            <label for="name" class="text-gray mb-1">姓名</label>
+            <input id="name" type="text"
+              class="w-full bg-dark border border-white rounded px-4 py-2 placeholder:text-gray focus:ring-0 focus:border-gray-300"
+              placeholder="請輸入姓名">
+          </div>
+          <div>
+            <label for="tel" class="text-gray mb-1">電話</label>
+            <input id="tel" type="tel"
+              class="w-full bg-dark border border-white rounded px-4 py-2 placeholder:text-gray focus:ring-0 focus:border-gray-300"
+              placeholder="請輸入電話號碼">
+          </div>
+          <div class="lg:col-span-full">
+            <label for="orderEmail" class="text-gray mb-1">Email</label>
+            <input id="orderEmail" type="email"
+              class="w-full bg-dark border border-white rounded px-4 py-2 placeholder:text-gray focus:ring-0 focus:border-gray-300"
+              placeholder="請輸入Email">
+          </div>
+          <div>
+            <label for="course" class="text-gray mb-1">課程</label>
+            <select name="course" id="course"
+              class="w-full text-white bg-dark border border-white rounded px-4 py-2 placeholder:text-gray focus:ring-0 focus:border-gray-300">
+              <option value="10堂50分鐘" selected>10堂50分鐘</option>
+              <option value="20堂120分鐘">20堂120分鐘</option>
+              <option value="30堂200分鐘">30堂200分鐘</option>
+            </select>
+          </div>
+          <div>
+            <label for="date" class="text-gray mb-1">想預約的日期</label>
+            <input id="date" type="text"
+              class="w-full bg-dark border border-white rounded px-4 py-2 placeholder:text-gray focus:ring-0 focus:border-gray-300"
+              placeholder="請選擇日期">
+          </div>
+          <div class="lg:col-span-full">
+            <label for="location" class="text-gray mb-1">上課地點</label>
+            <input id="location" type="text"
+              class="w-full bg-dark border border-white rounded px-4 py-2 placeholder:text-gray focus:ring-0 focus:border-gray-300"
+              placeholder="請輸入上課地點">
+          </div>
+        </div>
+        <div class="lg:flex lg:justify-between lg:items-center">
+          <p class="font-Azeret text-lg mb-6 lg:mb-0">NT$1600</p>
+          <a href="#" id="checkout"
+            class="text-center text-lg rounded-lg border border-transparent bg-gradient-to-r from-blue to-green px-4 py-2 lg:px-12 hover-500 hover:bg-[center_left_168px]">前往結賬</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="creditCard" class="hidden">
+    <div class="text-gray-500 px-3 mb-9 lg:bg-dark lg:pt-6 lg:pb-4 lg:mb-12">
+      <ol
+        class="flex justify-between relative before:absolute before:left-10 before:top-2.5 before:w-2/5 before:h-0.5 before:bg-green after:absolute after:right-8 after:top-2.5 after:w-2/5 after:h-0.5 after:bg-gray lg:w-[832px] lg:mx-auto lg:before:w-[48%] lg:before:left-6 lg:after:w-[48%] lg:after:right-6">
+        <li>
+          <span
+            class="relative z-10 flex justify-center items-center font-Azeret text-12 w-5 h-5 rounded-full border border-green text-white bg-green mx-auto mb-1">
+            ✔
+          </span>
+          <p class="text-green">課程報名</p>
+        </li>
+        <li>
+          <span
+            class="relative z-10 flex justify-center items-center font-Azeret text-12 w-5 h-5 rounded-full border border-green text-white bg-green mx-auto mb-1">
+            2
+          </span>
+          <p class="text-green">信用卡付款</p>
+        </li>
+        <li>
+          <span
+            class="relative z-10 flex justify-center items-center font-Azeret text-12 w-5 h-5 rounded-full border border-gray-500 text-white bg-dark-300 mx-auto mb-1">
+            3
+          </span>
+          <p>付款成功</p>
+        </li>
+      </ol>
+    </div>
+    <div class="container">
+      <form action="credit-card.html" class="bg-dark p-6 lg:w-[416px] lg:mx-auto lg:px-8 lg:py-12">
+        <h2 class="text-center text-2xl font-bold mb-6 lg:mb-12">信用卡付款</h2>
+        <h3 class="text-center text-lg font-bold mb-4 lg:text-left lg:mb-6">請輸入信用卡資訊進行付款</h3>
+        <div class="space-y-4 mb-4 lg:space-y-6 lg:mb-6">
+          <div>
+            <label for="card-account" class="text-gray mb-1">信用卡帳號</label>
+            <input id="card-account" type="number"
+              class="w-full bg-dark border border-white rounded px-4 py-2 placeholder:text-gray focus:ring-0 focus:border-gray-300"
+              placeholder="Xxxx-xxxx-xxxx-xxxx">
+          </div>
+          <div>
+            <label for="security-code" class="text-gray mb-1">安全碼</label>
+            <input id="security-code" type="password"
+              class="w-full bg-dark border border-white rounded px-4 py-2 placeholder:text-gray focus:ring-0 focus:border-gray-300"
+              placeholder="***">
+          </div>
+          <div>
+            <label for="effective-date" class="text-gray mb-1">有效日期</label>
+            <input id="effective-date" type="text"
+              class="w-full bg-dark border border-white rounded px-4 py-2 placeholder:text-gray focus:ring-0 focus:border-gray-300"
+              placeholder="(MM-YY)">
+          </div>
+        </div>
+        <div class="lg:flex lg:justify-between lg:items-center">
+          <p class="font-Azeret text-lg mb-6 lg:mb-0">NT$1600</p>
+          <a href="#" id="next"
+            class="text-center text-lg rounded-lg border border-transparent bg-gradient-to-r from-blue to-green px-4 py-2 lg:px-12 hover-500 hover:bg-[center_left_150px]">下一步</a>
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+  <div id="success" class="hidden">
+    <div class="text-gray-500 px-3 mb-9 lg:bg-dark lg:pt-6 lg:pb-4 lg:mb-12">
+      <ol
+        class="flex justify-between relative before:absolute before:left-10 before:top-2.5 before:w-2/5 before:h-0.5 before:bg-green after:absolute after:right-8 after:top-2.5 after:w-2/5 after:h-0.5 after:bg-green lg:w-[832px] lg:mx-auto lg:before:w-[48%] lg:before:left-6 lg:after:w-[48%] lg:after:right-6">
+        <li>
+          <span
+            class="relative z-10 flex justify-center items-center font-Azeret text-12 w-5 h-5 rounded-full border border-green text-white bg-green mx-auto mb-1">
+            ✔
+          </span>
+          <p class="text-green">課程報名</p>
+        </li>
+        <li>
+          <span
+            class="relative z-10 flex justify-center items-center font-Azeret text-12 w-5 h-5 rounded-full border border-green text-white bg-green mx-auto mb-1">
+            ✔
+          </span>
+          <p class="text-green">信用卡付款</p>
+        </li>
+        <li>
+          <span
+            class="relative z-10 flex justify-center items-center font-Azeret text-12 w-5 h-5 rounded-full border border-green text-white bg-green mx-auto mb-1">
+            ✔
+          </span>
+          <p class="text-green">付款成功</p>
+        </li>
+      </ol>
+    </div>
+    <div class="container">
+      <div class="bg-dark p-6 lg:w-[416px] lg:mx-auto lg:bg-dark-300 lg:px-8 lg:py-12">
+        <h2 class="flex justify-center items-center text-center text-2xl font-bold mb-6 lg:mb-12">
+          <span class="material-symbols-outlined text-5xl text-green mr-4">
+            verified
+          </span>
+          完成訂購
+        </h2>
+        <p class="mb-6 lg:mb-8">
+          恭喜您已完成<span class="font-bold">「2022 Python 全攻略｜從入門到實務」</span>課程報名，請注意郵件訊息，家教老師將與您聯繫！
+        </p>
+        <a href="course.html" id="next"
+          class="w-4/5 text-center text-lg rounded-lg border border-transparent bg-gradient-to-r from-blue to-green px-4 py-2 mx-auto lg:px-12 hover-500 hover:bg-[center_left_233px] lg:w-4/6">看看其他課程</a>
+      </div>
+    </div>
+  </div>
+</main>
